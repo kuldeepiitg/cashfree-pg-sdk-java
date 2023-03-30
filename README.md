@@ -31,9 +31,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
-  <artifactId>openapi-java-client</artifactId>
-  <version>2022-09-01</version>
+  <groupId>com.cashfree.pg.java</groupId>
+  <artifactId>api</artifactId>
+  <version>3.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -41,17 +41,6 @@ Add this dependency to your project's POM:
 ### Gradle users
 
 Add this dependency to your project's build file:
-
-```groovy
-  repositories {
-    mavenCentral()     // Needed if the 'openapi-java-client' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'openapi-java-client' jar has been published to the local maven repo.
-  }
-
-  dependencies {
-     implementation "org.openapitools:openapi-java-client:2022-01-01"
-  }
-```
 
 ### Others
 
@@ -111,8 +100,6 @@ public static void main(String[] args) {
       System.err.println("Response headers: " + e.getResponseHeaders());
       e.printStackTrace();
     }
-    Use similar logic for the create order, use other functions from the CFPaymentGatewayService class to pay order, get order, create refund etc,.
-
 }
     
 ```

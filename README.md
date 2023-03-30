@@ -1,8 +1,7 @@
 # cashfree-pg-sdk-java
 
 New Payment Gateway APIs
-- API version: 2022-09-01
-  - Build date: 2023-03-16T14:01:52.135917+05:30[Asia/Kolkata]
+- API version: 3.0.0
 
 
 ## Requirements
@@ -172,5 +171,5 @@ Use similar logic as create order to access other APIs. Use other functions from
 
 ## Author
 
-nextgenapi@cashfree.com
+developers@cashfree.com
 

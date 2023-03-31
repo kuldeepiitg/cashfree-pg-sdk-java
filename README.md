@@ -66,7 +66,7 @@ CFConfig config =
                     .build();
 ```
 ---
-# Creating a CFHeader
+## Creating a CFHeader
 
 The CFHeader consists of properties such as Request-Id, Idempotency-Key that are sent in the headers as part of every request. The following code snippet can be used to create a CFHeader instance. Request_Id and Idempotency-Key are to be passed as strings.:-
 Note: This is an optional type, where in the Request-Id can help for better logging.
@@ -74,7 +74,7 @@ Note: This is an optional type, where in the Request-Id can help for better logg
     CFHeaders headers = CFHeaders.builder().RequestID(request-id-as-string).IdempotencyKey(idempotency-key-as-string).build();
 ```
 ---
-# Creating an Order with Cashfree
+## Creating an Order with Cashfree
 
 To process any payment on Cashfree PG, the merchant needs to create an order in the cashfree system. An order can be created using a similar code to the following code snippet. Some more parameters can be set depending on use case.:-
 
@@ -103,7 +103,7 @@ public static void main(String[] args) {
     
 ```
 ---
-# Other APIs:
+## Other APIs:
 
 Use similar logic as create order to access other APIs. Use other functions from the CFPaymentGatewayService class to pay order, get order, create refund etc,.
 

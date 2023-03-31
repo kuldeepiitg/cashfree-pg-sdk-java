@@ -103,6 +103,9 @@ public static void main(String[] args) {
     
 ```
 ---
+
+## Paying 
+---
 ## Other APIs:
 
 Use similar logic as create order to access other APIs. Use other functions from the CFPaymentGatewayService class to pay order, get order, create refund etc,.

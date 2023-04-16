@@ -14,12 +14,45 @@ Building the API client library requires:
 
 To install the API client library to your local Maven repository, simply execute:
 
+To build must do following
+1. Install gpg2 with following 
+```shell
+brew install gpg2
+```
+
+2. Generate gpg key
+```shell
+gpg --gen-key
+```
+
+3. Set required env variable
+```shell
+export GPG_TTY=$(tty)
+```
+
+4. 
 ```shell
 mvn clean install
 ```
 
-To deploy it to a remote Maven repository instead, configure the settings of the repository and execute:
+5. Set pom.xml with repo as given below
 
+```xml
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>maven-releases</name>
+            <url>http://maven.tarkshala.com:10081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>maven-snapshots</name>
+            <url>http://maven.tarkshala.com:10081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+```
+
+6. To deploy it to a remote Maven repository instead, configure the settings of the repository and execute:
 ```shell
 mvn clean deploy
 ```
